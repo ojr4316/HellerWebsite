@@ -6,7 +6,6 @@ export type Post = {
   _updatedAt: string;
   mainImage: string;
   author: Author;
-  mainImage: string;
   body?: BodyEntity[] | null;
   publishedAt: string;
   slug: Slug;
