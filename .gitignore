@@ -33,3 +33,6 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+
+# sanity studio dependencies
+/heller/node_modules
