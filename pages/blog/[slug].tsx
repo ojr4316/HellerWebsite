@@ -30,7 +30,7 @@ const Post = (props: Props) => {
   if (post) {
     return (
       <article>
-        <img src={urlFor(post.mainImage).width(200).url()} alt={''} />
+        <img src={urlFor(post.mainImage).width(200).url()} alt="Oops."></img>
         <h1>{post.title}</h1>
         <BlockContent blocks={post.body} serializers={serializers} />,
       </article>
