@@ -1,22 +1,38 @@
+/* eslint-disable @next/next/no-img-element */
 import { GetStaticPropsContext } from "next";
 import client from "../../client";
 import { Post as PostType, BodyEntity, ChildrenEntity } from "../../types/Post";
+import imageUrlBuilder from '@sanity/image-url';
+import { SanityImageSource } from "@sanity/image-url/lib/types/types";
+const BlockContent = require('@sanity/block-content-to-react');
 
 type Props = {
   post: PostType;
 };
+
+const builder = imageUrlBuilder(client)
+function urlFor(source: SanityImageSource) {
+  return builder.image(source)
+}
+
+const serializers = {
+  types: {
+    code: (props: any) => (
+      <pre data-language={props.node.language}>
+        <code>{props.node.code}</code>
+      </pre>
+    ),
+  },
+}
 
 const Post = (props: Props) => {
   const { post } = props;
   if (post) {
     return (
       <article>
+        <img src={urlFor(post.mainImage).width(200).url()} alt={''} />
         <h1>{post.title}</h1>
-        {post.body?.map((be: BodyEntity) =>
-          be.children?.map((child: ChildrenEntity) => (
-            <p key={child._key}> {child.text} </p>
-          ))
-        )}
+        <BlockContent blocks={post.body} serializers={serializers} />,
       </article>
     );
   } else {
