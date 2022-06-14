@@ -1,16 +1,26 @@
+/* eslint-disable @next/next/no-img-element */
 import { GetStaticPropsContext } from "next";
 import client from "../../client";
 import { Post as PostType, BodyEntity, ChildrenEntity } from "../../types/Post";
+import imageUrlBuilder from '@sanity/image-url';
+import { SanityImageSource } from "@sanity/image-url/lib/types/types";
 
 type Props = {
   post: PostType;
 };
+
+const builder = imageUrlBuilder(client)
+
+function urlFor(source: SanityImageSource) {
+  return builder.image(source)
+}
 
 const Post = (props: Props) => {
   const { post } = props;
   if (post) {
     return (
       <article>
+        <img src={urlFor(post.mainImage).width(200).url()} alt="Oops."></img>
         <h1>{post.title}</h1>
         {post.body?.map((be: BodyEntity) =>
           be.children?.map((child: ChildrenEntity) => (
