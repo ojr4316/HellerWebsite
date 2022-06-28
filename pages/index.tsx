@@ -4,7 +4,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
-const Home: NextPage = () => {
+export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
@@ -61,5 +61,3 @@ const Home: NextPage = () => {
     </div>
   );
 };
-
-export default Home;

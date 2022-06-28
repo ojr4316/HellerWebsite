@@ -1,18 +1,18 @@
 /* eslint-disable @next/next/no-img-element */
 import { GetStaticPropsContext } from "next";
-import client from "../../client";
+import client, { dataset, projectId } from "../../client";
 import { Post as PostType, BodyEntity, ChildrenEntity } from "../../types/Post";
-import imageUrlBuilder from '@sanity/image-url';
+import imageUrlBuilder from "@sanity/image-url";
 import { SanityImageSource } from "@sanity/image-url/lib/types/types";
-const BlockContent = require('@sanity/block-content-to-react');
+const BlockContent = require("@sanity/block-content-to-react");
 
 type Props = {
   post: PostType;
 };
 
-const builder = imageUrlBuilder(client)
+const builder = imageUrlBuilder(client);
 function urlFor(source: SanityImageSource) {
-  return builder.image(source)
+  return builder.image(source);
 }
 
 const serializers = {
@@ -23,7 +23,7 @@ const serializers = {
       </pre>
     ),
   },
-}
+};
 
 const Post = (props: Props) => {
   const { post } = props;
@@ -32,7 +32,7 @@ const Post = (props: Props) => {
       <article>
         <img src={urlFor(post.mainImage).width(200).url()} alt="Oops."></img>
         <h1>{post.title}</h1>
-        <BlockContent blocks={post.body} serializers={serializers} />,
+        <BlockContent blocks={post.body} serializers={serializers} imageOptions={{w: 320, h: 240, fit: 'max'}} dataset={dataset} projectId={projectId} />,
       </article>
     );
   } else {

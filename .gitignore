@@ -36,3 +36,6 @@ yarn-error.log*
 
 # sanity studio dependencies
 /heller/node_modules
+
+yarn.lock
+/heller/yarn.lock
