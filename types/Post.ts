@@ -4,7 +4,6 @@ export type Post = {
   _rev: string;
   _type: string;
   _updatedAt: string;
-  mainImage: string;
   author: Author;
   mainImage: string;
   body?: BodyEntity[] | null;
