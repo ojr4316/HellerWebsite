@@ -24,15 +24,13 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 };
 
 export default function Blog(props: Props) {
-  console.log(props.posts);
   return (
-    <Layout>
-      <div className={styles.blog}>
-        <h1> Blog Posts </h1>
-        {props.posts.map((p) => (
+    <div className={styles.blog}>
+      <div className={styles.posts}>
+        {[...props.posts, ...props.posts, ...props.posts, ...props.posts].map((p) => (
           <BlogCard key={p._id} post={p} />
         ))}
       </div>
-    </Layout>
+    </div>
   );
 }
