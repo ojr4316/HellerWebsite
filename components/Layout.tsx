@@ -11,7 +11,7 @@ type Props = {
 
 export default function Layout(props: Props) {
     return (
-        <div>
+        <div className={styles.page_container}>
             <header className={styles.header_main}>
                 <div className={styles.header_container}>
                     <Link href="./" >
@@ -28,7 +28,7 @@ export default function Layout(props: Props) {
                     </div>
                 </div>
             </header>
-            <main>{props.children}</main>
+            <main className={styles.main}>{props.children}</main>
             <footer className={styles.footer_main}>
                 <div className={styles.footer_container}>
                     <div className={styles.footer_social_logo_container}>
