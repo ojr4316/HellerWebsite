@@ -23,10 +23,10 @@ export default function Layout(props: Props) {
             <div className={styles.logo_container}>Heller Website</div>
           </Link>
           <div className={styles.pages_container}>
-            <Link href="/about">About</Link>
-            <Link href="/#">Portfolio</Link>
-            <Link href="/blog">Blog</Link>
-            <Link href="/#">Services</Link>
+            <Link href="/about"><p className={styles.link_text}>About</p></Link>
+            <Link href="/#"><p className={styles.link_text}>Portfolio</p></Link>
+            <Link href="/blog"><p className={styles.link_text}>Blog</p></Link>
+            <Link href="/#"><p className={styles.link_text}>Services</p></Link>
             <Link href="/#">
               <div className={styles.contact_button}>Contact</div>
             </Link>
