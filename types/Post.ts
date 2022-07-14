@@ -1,3 +1,5 @@
+import { SanityImageSource } from "@sanity/image-url/lib/types/types";
+
 export type Post = {
   _createdAt: string;
   _id: string;
@@ -9,7 +11,9 @@ export type Post = {
   publishedAt: string;
   slug: Slug;
   title: string;
+  mainImage: SanityImageSource;
 };
+
 export type Author = {
   _ref: string;
   _type: string;
