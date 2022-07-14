@@ -9,6 +9,7 @@ export type Post = {
   publishedAt: string;
   slug: Slug;
   title: string;
+  mainImage: string;
 };
 export type Author = {
   _ref: string;
