@@ -12,52 +12,61 @@ export default function Home() {
         <meta name="description" content="Digital Media Marketing website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={styles.intro_images}>
-        <div className={styles.image_container}>
-          <img className={styles.image} src="../images/heller.jpg" alt="A brawny looking man"/>
+      <section className={styles.hero}>
+        <video className={styles.homevideo} loop muted autoPlay>
+          <source src="../assets/city.mp4" type="video/mp4" />
+        </video>
+        <div className={styles.overlay}>
+          <h1>Heller&apos;s Digital Media Marketing Website</h1>
+          <h2>
+            Where I take the ease of handling your online prescense for you!
+          </h2>
+          <button type="button">Get In Touch!</button>
         </div>
-        <div className={styles.image_container}>
-          <img className={styles.image2} src="../images/heller2.jpg" alt="A brawny looking man"/>
+      </section>
+      <section id="about" className={styles.about}>
+        <h1>What we do</h1>
+        <div className={styles.about_container}>
+          <p>Struggling to manage all the social medias for your business?</p>
+          <p>That&apos;s where we come in.</p>
+          <p>
+            We&apos;ll take the stress of handling your online presence for you.
+          </p>
         </div>
-        <div className={styles.image_container}>
-          <img className={styles.image} src="../images/heller3.jpg" alt="A brawny looking man"/>
-        </div>
-        <div className={styles.image_container}>
-          <img className={styles.image} src="../images/heller.jpg" alt="A brawny looking man"/>
-        </div>
-      </div>
+      </section>
       <section id="services" className={styles.services}>
-        <h1>Heller&apos;s Digital Media Marketing Website</h1>
-        <h2>
-          Where I take the ease of handling your online prescense for you!
-        </h2>
-        <br />
         <h1>Our top 2 services</h1>
         <div className={styles.intro_content_container}>
           <div className={styles.intro_content}>
             <h4>Social Media Marketing</h4>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Et
-              tortor at risus viverra. Sed arcu non odio euismod lacinia at.
+              We&apos;ll take the ease of managing your company&apos;s social
+              medias. This include but is not limited to making posts, growing
+              your following, and targetted advertising.
             </p>
           </div>
           <div className={styles.intro_content}>
             <h4>Google Advertising</h4>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Et
-              tortor at risus viverra. Sed arcu non odio euismod lacinia at.
+              Through Google Advertising, we&apos;ll be able to help bring your
+              company&apos;s website to the top of search results. We can
+              optimize your posts to make sure you&apos;re one of the top
+              results!
             </p>
           </div>
         </div>
       </section>
       <section id="clients" className={styles.clients}>
         <h1>Our top clients</h1>
-        <div className={styles.clients_container}>  
-          Scroller here
+        <div className={styles.clients_container}>
+          <div className={styles.client_card}>
+            <img src="../images/picture1.jpg" alt="James Dezao Law" />
+          </div>
+          <div className={styles.client_card}></div>
+          <div className={styles.client_card}></div>
+          <div className={styles.client_card}></div>
         </div>
       </section>
     </div>
   );
-};
+}

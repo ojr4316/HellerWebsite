@@ -6,6 +6,7 @@
   height: 8vh;
   background-image: linear-gradient(#ACCBE1, #7C98B3);
   padding: 0 0;
+  z-index: 2;
 }
 
 .header_container {
