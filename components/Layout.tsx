@@ -1,6 +1,9 @@
 import { ReactNode } from "react"
 import styles from "../styles/Layout.module.css"
 import Link from "next/link"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebook, faInstagram, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 type Props = {
     children?: ReactNode;
@@ -34,6 +37,19 @@ export default function Layout(props: Props) {
                 </div>
             </header>
             <main>{props.children}</main>
+            <footer className={styles.footer_main}>
+                <div className={styles.footer_container}>
+                    <div className={styles.footer_social_logo_container}>
+                        <Link href="https://www.facebook.com">
+                            <FontAwesomeIcon icon={faFacebook} className={styles.footer_social_logo}/>
+                        </Link>
+                        <FontAwesomeIcon icon={faInstagram} className={styles.footer_social_logo}/>
+                        <FontAwesomeIcon icon={faTwitter} className={styles.footer_social_logo}/>
+                        <FontAwesomeIcon icon={faYoutube} className={styles.footer_social_logo}/>
+                    </div>
+                </div>
+
+            </footer>
         </div>
     )
 }
