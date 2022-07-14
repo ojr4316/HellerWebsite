@@ -1,4 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
+import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
@@ -61,10 +63,127 @@ export default function Home() {
         <div className={styles.clients_container}>
           <div className={styles.client_card}>
             <img src="../images/picture1.jpg" alt="James Dezao Law" />
+            <div className={styles.client_card_text}>
+              <p>James Dezao Law</p>
+              <button type="button">See More</button>
+            </div>
           </div>
-          <div className={styles.client_card}></div>
-          <div className={styles.client_card}></div>
-          <div className={styles.client_card}></div>
+          <div className={styles.client_card}>
+            <img
+              src="../images/picture2.jpg"
+              alt="Daymond John with The Shark Group"
+            />
+            <div className={styles.client_card_text}>
+              <p>Daymond John</p>
+              <button type="button">See More</button>
+            </div>
+          </div>
+          <div className={styles.client_card}>
+            <img src="../images/picture1.jpg" alt="James Dezao Law" />
+            <div className={styles.client_card_text}>
+              <p>James Dezao Law</p>
+              <button type="button">See More</button>
+            </div>
+          </div>
+          <div className={styles.client_card}>
+            <img
+              src="../images/picture2.jpg"
+              alt="Daymond John with The Shark Group"
+            />
+            <div className={styles.client_card_text}>
+              <p>Daymond John</p>
+              <button type="button">See More</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="testimonials" className={styles.testimonials}>
+        <h1>Our highest-rated testimonials</h1>
+        <div className={styles.testimonial_card_container}>
+          <div className={styles.testimonial_card}>
+            <img src="../images/heller.jpg" alt="heller" />
+            <p className={styles.tcard_name}>Zach Heller</p>
+            <p className={styles.tcard_desc}>
+              &quot;Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+              vero quibusdam laborum necessitatibus non voluptas aliquam&quot;
+            </p>
+            <div className={styles.star_container}>
+              <FontAwesomeIcon
+                className={`${styles.checked} ${styles.star}`}
+                icon={faStar}
+              />
+              <FontAwesomeIcon
+                className={`${styles.checked} ${styles.star}`}
+                icon={faStar}
+              />
+              <FontAwesomeIcon
+                className={`${styles.checked} ${styles.star}`}
+                icon={faStar}
+              />
+              <FontAwesomeIcon
+                className={`${styles.checked} ${styles.star}`}
+                icon={faStar}
+              />
+              <FontAwesomeIcon className={`${styles.star}`} icon={faStar} />
+            </div>
+            <p className={styles.tcard_date}>- 7/14/2022</p>
+          </div>
+          <div className={styles.testimonial_card}>
+            <img src="../images/heller.jpg" alt="heller" />
+            <p className={styles.tcard_name}>Zach Heller</p>
+            <p className={styles.tcard_desc}>
+              &quot;Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+              vero quibusdam laborum necessitatibus non voluptas aliquam&quot;
+            </p>
+            <div className={styles.star_container}>
+              <FontAwesomeIcon
+                className={`${styles.checked} ${styles.star}`}
+                icon={faStar}
+              />
+              <FontAwesomeIcon
+                className={`${styles.checked} ${styles.star}`}
+                icon={faStar}
+              />
+              <FontAwesomeIcon
+                className={`${styles.checked} ${styles.star}`}
+                icon={faStar}
+              />
+              <FontAwesomeIcon
+                className={`${styles.checked} ${styles.star}`}
+                icon={faStar}
+              />
+              <FontAwesomeIcon className={`${styles.star}`} icon={faStar} />
+            </div>
+            <p className={styles.tcard_date}>- 7/14/2022</p>
+          </div>
+          <div className={styles.testimonial_card}>
+            <img src="../images/heller.jpg" alt="heller" />
+            <p className={styles.tcard_name}>Zach Heller</p>
+            <p className={styles.tcard_desc}>
+              &quot;Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+              vero quibusdam laborum necessitatibus non voluptas aliquam&quot;
+            </p>
+            <div className={styles.star_container}>
+              <FontAwesomeIcon
+                className={`${styles.checked} ${styles.star}`}
+                icon={faStar}
+              />
+              <FontAwesomeIcon
+                className={`${styles.checked} ${styles.star}`}
+                icon={faStar}
+              />
+              <FontAwesomeIcon
+                className={`${styles.checked} ${styles.star}`}
+                icon={faStar}
+              />
+              <FontAwesomeIcon
+                className={`${styles.checked} ${styles.star}`}
+                icon={faStar}
+              />
+              <FontAwesomeIcon className={`${styles.star}`} icon={faStar} />
+            </div>
+            <p className={styles.tcard_date}>- 7/14/2022</p>
+          </div>
         </div>
       </section>
     </div>
