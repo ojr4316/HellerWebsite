@@ -23,10 +23,10 @@ export default function Layout(props: Props) {
             <div className={styles.logo_container}>Heller Website</div>
           </Link>
           <div className={styles.pages_container}>
-            <Link href="/about"><p className={styles.link_text}>About</p></Link>
-            <Link href="/#"><p className={styles.link_text}>Portfolio</p></Link>
-            <Link href="/blog"><p className={styles.link_text}>Blog</p></Link>
-            <Link href="/#"><p className={styles.link_text}>Services</p></Link>
+            <Link href="/about">About</Link>
+            <Link href="/#">Portfolio</Link>
+            <Link href="/blog">Blog</Link>
+            <Link href="/#">Services</Link>
             <Link href="/#">
               <div className={styles.contact_button}>Contact</div>
             </Link>
@@ -43,18 +43,39 @@ export default function Layout(props: Props) {
                 className={styles.footer_social_logo}
               />
             </Link>
-            <FontAwesomeIcon
-              icon={faInstagram}
-              className={styles.footer_social_logo}
-            />
-            <FontAwesomeIcon
-              icon={faTwitter}
-              className={styles.footer_social_logo}
-            />
-            <FontAwesomeIcon
-              icon={faYoutube}
-              className={styles.footer_social_logo}
-            />
+            <Link href="https://www.instagram.com">
+              <FontAwesomeIcon
+                icon={faInstagram}
+                className={styles.footer_social_logo}
+              />
+            </Link>
+            <Link href="https://www.twitter.com">
+              <FontAwesomeIcon
+                icon={faTwitter}
+                className={styles.footer_social_logo}
+              />
+            </Link>
+            <Link href="https://www.youtube.com">
+              <FontAwesomeIcon
+                icon={faYoutube}
+                className={styles.footer_social_logo}
+              />
+            </Link>
+          </div>
+          <hr className={styles.spacer}></hr>
+          <div className={styles.footer_info_container}>
+            <div className={styles.footer_contact_info}>
+              <h3>Hellers Productions</h3>
+              <p>Established 2019</p>
+              <p>Email: hellermedia@gmail.com</p>
+              <p>Site designed by JOC</p>
+            </div>
+            <div className={styles.footer_page_links}>
+              <Link href="/about">About</Link>
+              <Link href="/about">Portfolio</Link>
+              <Link href="/about">Blog</Link>
+              <Link href="/about">Services</Link>
+            </div>
           </div>
         </div>
       </footer>
