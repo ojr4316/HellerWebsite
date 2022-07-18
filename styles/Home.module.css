@@ -92,8 +92,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 0 auto;
-  height: 40vh;
+  padding: 64px 0;
 }
 
 .testimonials,
@@ -101,7 +100,6 @@
   justify-content: flex-start;
   height: fit-content;
 }
-
 
 .intro_content_container {
   justify-content: center;
@@ -123,15 +121,16 @@
 .services h1, 
 .clients h1,
 .testimonials h1 {
-  font-size: 35px;
+  font-size: 32px;
   color: var(--global-text-color);
+  margin-top: 32px;
 }
 .services h2 {
-  font-size: 30px;
+  font-size: 24px;
   color: var(--global-text-color);
 }
 .services h3 {
-  font-size: 25px;
+  font-size: 18px;
   color: var(--global-text-color);
 }
 
@@ -150,7 +149,8 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: opacity 0.6s;
+  opacity: 1;
+  transition: all ease 0.1s;
 }
 .client_card_text {
   position: absolute;
@@ -158,43 +158,33 @@
   left: 0;
   width: 100%;
   height: 100%;
-  color: white;
-  font-size: 40px;
+  color: var(--white);
+  font-size: 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  opacity: 0;
-
-  transition: opacity 0.6s;
-  background-color: rgba(0, 0, 0, 0.6);
-  box-shadow:0px 0px 50px 50px rgba(255,255,255,0.8) inset;
-}
-.client_card:hover .client_card_text {
-  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .client_card:hover img {
-  opacity: 0.2;
+  opacity: 0.6;
 }
+
 .client_card button {
   background-color: transparent;
-  color: white;
-  border: 5px solid white;
-  font-size: 25px;
-  padding: 1rem 2rem;
-  border-radius: 15px;
-  margin-top: 2rem;
+  color: var(--white);
+  border: 2px solid var(--white);
+  font-size: 16px;
+  padding: 8px 16px;
+  margin-top: 16px;
   transition: background-color 0.3s;
 }
 .client_card button:hover {
   cursor: pointer;
-  background-color: rgba(255,255,255,0.25);
+  border: 2px solid var(--red);
 }
 .client_card button:active{
-  background-color: rgba(255,255,255,0.5);
-}
-.clients h1{
-  margin: 5rem 0;
+  background-color: var(--red);
 }
 
 .testimonial_card_container {

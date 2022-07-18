@@ -71,10 +71,10 @@ export default function Layout(props: Props) {
               <p>Site designed by JOC</p>
             </div>
             <div className={styles.footer_page_links}>
-              <Link href="/about">About</Link>
-              <Link href="/about">Portfolio</Link>
-              <Link href="/about">Blog</Link>
-              <Link href="/about">Services</Link>
+              <Link href="/about"><p className={styles.footer_link}>About</p></Link>
+              <Link href="/about"><p className={styles.footer_link}>Portfolio</p></Link>
+              <Link href="/about"><p className={styles.footer_link}>Blog</p></Link>
+              <Link href="/about"><p className={styles.footer_link}>Services</p></Link>
             </div>
           </div>
         </div>
